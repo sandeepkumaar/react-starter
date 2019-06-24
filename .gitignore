@@ -1,0 +1,11 @@
+/build
+/node_modules
+
+# public
+/public/assets
+/public/css
+/public/js
+
+
+# misc
+*.zip

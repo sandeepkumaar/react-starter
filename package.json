@@ -1,0 +1,34 @@
+{
+  "name": "react-starter",
+  "version": "1.0.0",
+  "description": "react starter template with browserify, parcelify build tools ",
+  "main": "index.js",
+  "scripts": {
+    "prebuild:js": "mkdirp public/js",
+    "build:js": "browserify src/index.js -t babelify -o public/js/bundle.js -d",
+    "build": "npm run build:js",
+		"clean:js": "rimraf public/js",
+		"clean": "npm run clean:js"
+  },
+  "keywords": [
+    "react-stater",
+    "browserify",
+    "parcelify",
+    "hooks"
+  ],
+  "author": "sandeepkumaar.c",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.3"
+  }
+}
