@@ -50,4 +50,15 @@ Includes:
 },
 ```
 
-### Bundle css
+### watch js 
+
+scripts
+```
+"watch:js": "watchify src/index.js -t babelify -o public/js/bundle.js -dv",
+"watch": "npm run watch:js"
+```
+
+devDependencies
+```
+"watchify": "^3.11.1"
+```

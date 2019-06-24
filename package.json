@@ -7,8 +7,10 @@
     "prebuild:js": "mkdirp public/js",
     "build:js": "browserify src/index.js -t babelify -o public/js/bundle.js -d",
     "build": "npm run build:js",
-		"clean:js": "rimraf public/js",
-		"clean": "npm run clean:js"
+    "clean:js": "rimraf public/js",
+    "clean": "npm run clean:js",
+		"watch:js": "watchify src/index.js -t babelify -o public/js/bundle.js -dv",
+		"watch": "npm run watch:js"
   },
   "keywords": [
     "react-stater",
@@ -29,6 +31,7 @@
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
     "mkdirp": "^0.5.1",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "watchify": "^3.11.1"
   }
 }
