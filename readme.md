@@ -7,6 +7,8 @@ Includes:
 - PWA files
 - OOCSS setup
 
+
+
 ## Scritpts
 - build 
 - clean
@@ -21,44 +23,3 @@ Includes:
 - react-starter-context
 
 
-## Commits 
-
-### Bundle js
-
-```
-"devDependencies": {
-	"@babel/core": "^7.4.5",
-	"@babel/preset-env": "^7.4.5",
-	"@babel/preset-react": "^7.0.0",
-	"babelify": "^10.0.0",
-	"browserify": "^16.2.3",
-}
-```
-
-.babelrc
-```
-{
-	"presets": ["@babel/preset-env", "@babel/preset-react"]
-}
-```
-
-```
-"scripts": {
-	"prebuild:js": "mkdirp public/js",
-	"build:js": "browserify src/index.js -t babelify -o public/js/bundle.js -d",
-	"build": "npm run build:js",
-},
-```
-
-### watch js 
-
-scripts
-```
-"watch:js": "watchify src/index.js -t babelify -o public/js/bundle.js -dv",
-"watch": "npm run watch:js"
-```
-
-devDependencies
-```
-"watchify": "^3.11.1"
-```

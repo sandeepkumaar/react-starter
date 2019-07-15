@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "react starter template with browserify, parcelify build tools ",
   "main": "index.js",
+  "style": "src/css/*.css",
   "scripts": {
     "prebuild:js": "mkdirp public/js",
     "build:js": "browserify src/index.js -t babelify -o public/js/bundle.js -d",
     "build": "npm run build:js",
     "clean:js": "rimraf public/js",
     "clean": "npm run clean:js",
-		"watch:js": "watchify src/index.js -t babelify -o public/js/bundle.js -dv",
-		"watch": "npm run watch:js"
+    "watch:js": "watchify src/index.js -t babelify -o public/js/bundle.js -p [ parcelify -o public/css/bundle.css ] -dv",
+    "watch": "npm run watch:js"
   },
   "keywords": [
     "react-stater",
@@ -30,6 +31,7 @@
     "@babel/preset-react": "^7.0.0",
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
+		"parcelify": "^2.2.1",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.6.3",
     "watchify": "^3.11.1"

@@ -1,0 +1,54 @@
+/**
+ * Apply border box property to all elements
+ * Easier to calculate sizes
+ * https://css-tricks.com/box-sizing/
+*/
+*{
+  box-sizing: border-box;
+}
+
+/**
+ * html element takes full viewports width.
+ * Useful to SPAs
+ * html itself is a `position` element allows us to
+ * position other elments
+ */
+html{
+  height: 100%;
+  overflow: auto;
+}
+
+
+/**
+* By default takes the full screen space
+* Overflow
+*/
+body{
+  min-height: 100%;
+  position: relative;
+  line-height: 1.6em;
+}
+
+/**
+ * Fallback styles, can be overridden by component styles
+ */
+html,body{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+  /* fallback style */
+  background-color: #fff;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-display: optional;
+  color: #444;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size:14px;
+}
+
+
