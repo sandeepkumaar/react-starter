@@ -5,7 +5,7 @@ module.exports = function User() {
 		<div className="user">
 			<div>
 				<label>Name</label>
-				<p> Sandeep </p>
+				<p> sssndeeep </p>
 			</div>
 			<div>
 				<label>Age</label>

@@ -1,6 +1,5 @@
 {
 	"name": "user",
-	"version": 1,
 	"main": "index.js",
 	"style": "*.css"
 }
