@@ -42,3 +42,5 @@ import user form "./user"
 module.exports = {};
 
 loads the user.css and then index.css
+
+change directory structure

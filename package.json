@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "react starter template with browserify, parcelify build tools ",
   "main": "index.js",
-  "style": "src/css/*.css",
   "scripts": {
     "prebuild": "mkdirp public/js public/css",
-    "build": "browserify src/index.js -t babelify -o public/js/bundle.js -p [ parcelify -o public/css/bundle.css ] -d",
+    "build": "browserify main.js -t babelify -o public/js/bundle.js -p [ parcelify -o public/css/bundle.css ] -d",
     "clean:js": "rimraf public/js",
     "clean": "npm run clean:js",
-    "watch": "watchify src/index.js -t babelify -o public/js/bundle.js -p [ parcelify -wo public/css/bundle.css --loglevel verbose ] -dv"
+    "watch": "watchify main.js -t babelify -o public/js/bundle.js -p [ parcelify -wo public/css/bundle.css --loglevel verbose ] -dv"
   },
   "keywords": [
     "react-stater",
