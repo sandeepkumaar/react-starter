@@ -7,15 +7,21 @@ Includes:
 - PWA files
 - OOCSS setup
 
+## Quick start
+```
+$ npm install
+$ npm run watch
+$ npm start
 
+```
 
-## Scritpts
-- build 
-- clean
-- watch
-- start // create public/\* folders 
-- compress // output a .zip file with package-json name field
-
+## Commands 
+```
+$ npm run build 
+$ npm run watch
+$ npm start 
+$ npm clean
+```
 
 ## Variations
 - react-starter-pwa

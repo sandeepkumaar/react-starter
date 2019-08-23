@@ -2,13 +2,13 @@
   "name": "react-starter",
   "version": "1.0.0",
   "description": "react starter template with browserify, parcelify build tools ",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "prebuild": "mkdirp public/js public/css",
-    "build": "browserify main.js -t babelify -o public/js/bundle.js -p [ parcelify -o public/css/bundle.css ] -d",
-    "clean:js": "rimraf public/js",
-    "clean": "npm run clean:js",
-    "watch": "watchify main.js -t babelify -o public/js/bundle.js -p [ parcelify -wo public/css/bundle.css --loglevel verbose ] -dv"
+    "postinstall": "mkdirp public/js public/css",
+    "build": "browserify main.js -t babelify -p [ parcelify -o public/css/bundle.css ] | uglifyjs -cm > public/js/bundle.js ",
+    "clean": "rimraf public/js public/css node_modules",
+    "watch": "watchify main.js -t babelify -o public/js/bundle.js -p [ parcelify -wo public/css/bundle.css ] -dv",
+    "start": "serve public"
   },
   "keywords": [
     "react-stater",
@@ -29,8 +29,10 @@
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
     "parcelify": "^2.2.1",
+    "uglify-js": "^3.6.0",
+    "watchify": "^3.11.1",
+    "serve": "^11.1.0",
     "mkdirp": "^0.5.1",
-    "rimraf": "^2.6.3",
-    "watchify": "^3.11.1"
+    "rimraf": "^2.6.3"
   }
 }
