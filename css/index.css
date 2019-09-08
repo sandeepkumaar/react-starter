@@ -1,0 +1,5 @@
+@import "./reset.css";
+.app {
+  background: "black";
+  color:"white";
+}
